@@ -10,12 +10,13 @@ import HTMLTestRunner
 import time
 
 from testcase.test_cm import Cm
+from testcase.test_pd import Pd
 
 
 def testsuit():
     suite = unittest.TestSuite()
     suite.addTests([unittest.defaultTestLoader.loadTestsFromTestCase(Cm),
-
+                    unittest.defaultTestLoader.loadTestsFromTestCase(Pd),
 
 
                    ])
