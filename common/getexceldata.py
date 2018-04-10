@@ -5,7 +5,8 @@ import xlrd,json,xlwt
 import requests
 import os
 
-file = r'E:\Request-Excel\testdata\test_data.xls'
+# file = r'E:\Request-Excel\testdata\test_data.xls'
+file = '../testdata/test_data.xls'
 
 def get_data(name,rows,cols):
     '''
@@ -37,7 +38,6 @@ def get_formdata(name,rows):
     else:
         return json.loads(value)
 
-
 def get_nrows(name):
     '''
     读取行数
@@ -49,3 +49,6 @@ def get_nrows(name):
     nrows = sheet.nrows
     return nrows
 
+#  测试
+# a = get_data('cm',2,3)
+# print a
