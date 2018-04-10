@@ -5,7 +5,6 @@ import configparser
 import readConfig as conf
 
 
-
 host = conf.ReadConfig().getdbConfigValue('host')
 port = conf.ReadConfig().getdbConfigValue('port')
 user = conf.ReadConfig().getdbConfigValue('user')
