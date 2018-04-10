@@ -6,7 +6,8 @@ from xlutils.copy import copy
 import requests
 import os
 
-file = r'E:\Request-Excel\testdata\test_data.xls'
+# file = r'E:\Request-Excel\testdata\test_data.xls'
+file = '../testdata/test_data.xls'
 
 def set_data():
     oldWb=xlrd.open_workbook(file,formatting_info=True)
