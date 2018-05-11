@@ -13,21 +13,6 @@ import requests,time,re
 import json
 
 
-# def check():
-#     #判断结果是pass还是fail
-#     if int(r.status_code) == 200 :
-#         if checkdb.check('login',1) == 'pass':
-#             print re.search(str(get.get_data('login',1,10)),r.content)
-#             if re.search(str(get.get_data('login',1,10)),r.content) != None:
-#                 set.set_result(0,1,'pass')
-#             else:
-#                 set.set_result(0,1,'fail')
-#         else:
-#             set.set_result(0,1,'fail')
-#     else:
-#         set.set_result(0,1,'fail')
-
-
 def login():
     common_url=conf.ReadConfig().getloginConfigValue('url')
     login_url=get.get_data('login',1,2)
