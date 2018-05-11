@@ -11,7 +11,7 @@ import re,json
 def get_rcontent(content,jsonpath):
     '''
     从content中读取值，供下一个接口调用
-    :param content: 返回的content,为str类型
+    :param content: 返回的content,为str类型需要json.loads
     :param jsonpath: 从getexceldata中get_jsonpath获取
     :return:
     '''
