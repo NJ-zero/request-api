@@ -7,6 +7,7 @@ sys.setdefaultencoding('utf-8')
 import test_login
 from common import getexceldata as get
 from common import setexceldata as set
+from common import read_jsonpath as getjson
 from common.logs import log
 from common import readConfig as conf
 from common import connect_DB as db
@@ -21,13 +22,16 @@ class Pd(unittest.TestCase):
     def test_pd(self):
         cookie = test_login.login()
         common_url=conf.ReadConfig().getloginConfigValue('url')
-
+        jsondatas = ['data']
         for i in range(int(get.get_nrows('pd'))-1):
+            # 读取jsonpath
+            jsonpathexcel = get.get_jsonpath('pd', i + 1)
+
             # 判断是否执行
             if int(get.get_data('pd',i+1,4))== 1:
                 login_url=get.get_data('pd',i+1,2)
                 url = common_url + login_url
-                data = get.get_formdata('pd',i+1)
+                data = get.get_formdata('pd',i+1,jsondatas[-1])
                 header = {"Content-Type": "application/x-www-form-urlencoded","Cookie":cookie}
                 global r
                 print url
@@ -39,6 +43,9 @@ class Pd(unittest.TestCase):
                     elif checkall.checkall('pd',i+1,r.status_code,r.content) == 'fail':
                         set.set_result(1,i+1,'fail')
 
+                    if jsonpathexcel != '':
+                        jsondata=getjson.get_rcontent(json.loads(r.content),jsonpathexcel)
+                        jsondatas.append(jsondata)
                     set.set_statuscode(1,i+1,r.status_code)
                     set.set_content(1,i+1,r.content.decode('UTF-8'))
                     set.set_sql(1,i+1,checkdb.check('pd',i+1)[1])
