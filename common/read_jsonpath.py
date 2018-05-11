@@ -31,7 +31,6 @@ def repalce_formdata(data,newdata):
             data[k] = newdata
     return data
 
-
 #测试代码
 # dict2 = {
 #     'id':111111,
