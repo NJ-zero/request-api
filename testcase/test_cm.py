@@ -6,6 +6,7 @@ sys.setdefaultencoding('utf-8')
 import test_login
 from common import getexceldata as get
 from common import setexceldata as set
+from common import read_jsonpath as getjson
 from common.logs import log
 from common import readConfig as conf
 from common import connect_DB as db
@@ -22,10 +23,9 @@ class Cm(unittest.TestCase):
         common_url=conf.ReadConfig().getloginConfigValue('url')
         jsondatas=['data']
         for i in range(int(get.get_nrows('cm'))-1):
-            #将jsonpath存入列表中
-            jsondata=get.get_jsonpath('cm',i+1)
-            if jsondata !='':
-                jsondatas.append(jsondata)
+            #读取jsonpath
+            jsonpathexcel=get.get_jsonpath('cm',i+1)
+
             # 判断是否执行
             if int(get.get_data('cm',i+1,4))== 1:
                 login_url=get.get_data('cm',i+1,2)
@@ -42,6 +42,9 @@ class Cm(unittest.TestCase):
                     elif checkall.checkall('cm',i+1,r.status_code,r.content) == 'fail':
                         set.set_result(2,i+1,'fail')
 
+                    if jsonpathexcel != '':
+                        jsondata=getjson.get_rcontent(json.loads(r.content),jsonpathexcel)
+                        jsondatas.append(jsondata)
                     set.set_statuscode(2,i+1,r.status_code)
                     set.set_content(2,i+1,r.content.decode('UTF-8'))
                     set.set_sql(2,i+1,checkdb.check('cm',i+1)[1])
@@ -54,6 +57,9 @@ class Cm(unittest.TestCase):
                     elif checkall.checkall('cm',i+1,r.status_code,r.content) == 'fail':
                         set.set_result(2,i+1,'fail')
 
+                    if jsonpathexcel != '':
+                        jsondata=getjson.get_rcontent(json.loads(r.content),jsonpathexcel)
+                        jsondatas.append(jsondata)
                     set.set_statuscode(2,i+1,r.status_code)
                     set.set_content(2,i+1,r.content.decode('UTF-8'))
                     set.set_sql(2,i+1,checkdb.check('cm',i+1)[1])
