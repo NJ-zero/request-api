@@ -24,7 +24,7 @@ def get_data(name,rows,cols):
 
 def get_formdata(name,rows,change):
     '''
-    读取请求参数
+    读取请求参数,change为依赖参数，读取自上一个接口返回
     :param name: sheet名称
     :param rows: 行
     :return:

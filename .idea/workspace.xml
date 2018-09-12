@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe3b3cd8-3322-4a3d-8a4b-a8ac5f6b780d" name="Default" comment="增加读取依赖那一列的方法，优化formdata读取，增肌正则匹配与value替换">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Request-Excel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Request-Excel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fe3b3cd8-3322-4a3d-8a4b-a8ac5f6b780d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/setexceldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/setexceldata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/test_cm.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_cm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/test_data.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/test_data.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/getexceldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/getexceldata.py" afterDir="false" />
     </list>
     <ignored path="Request-Excel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getexceldata.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getexceldata.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/getexceldata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            <state relative-caret-position="114">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
                 <element signature="e#38#59#0" expanded="true" />
               </folding>
@@ -96,7 +91,7 @@
       <file leaf-file-name="setexceldata.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/setexceldata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="1135">
               <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
               <folding>
                 <element signature="e#38#59#0" expanded="true" />
@@ -105,11 +100,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_cm.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_cm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcase/test_cm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            <state relative-caret-position="242">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_pd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcase/test_pd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -137,13 +141,13 @@
         <option value="$PROJECT_DIR$/common/check_all.py" />
         <option value="$PROJECT_DIR$/testfuc.py" />
         <option value="$PROJECT_DIR$/test_runner.py" />
-        <option value="$PROJECT_DIR$/common/getexceldata.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/common/read_jsonpath.py" />
         <option value="$PROJECT_DIR$/testcase/test_login.py" />
-        <option value="$PROJECT_DIR$/testcase/test_pd.py" />
         <option value="$PROJECT_DIR$/common/setexceldata.py" />
         <option value="$PROJECT_DIR$/testcase/test_cm.py" />
+        <option value="$PROJECT_DIR$/testcase/test_pd.py" />
+        <option value="$PROJECT_DIR$/common/getexceldata.py" />
       </list>
     </option>
   </component>
@@ -580,7 +584,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526032796502</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add time consume">
+      <created>1536740114841</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1536740114841</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modify pattern">
+      <created>1536740221048</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536740221048</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -670,7 +688,9 @@
     <MESSAGE value="删除无效代码" />
     <MESSAGE value="支持接口依赖" />
     <MESSAGE value="依赖示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="依赖示例" />
+    <MESSAGE value="add time consume" />
+    <MESSAGE value="modify pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1094,19 +1114,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/getexceldata.py">
+    <entry file="file://$PROJECT_DIR$/testcase/test_cm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="e#38#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="242">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/test_pd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/setexceldata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="1135">
           <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
           <folding>
             <element signature="e#38#59#0" expanded="true" />
@@ -1114,17 +1138,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/test_pd.py">
+    <entry file="file://$PROJECT_DIR$/common/getexceldata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="48" column="59" lean-forward="true" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/test_cm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        <state relative-caret-position="114">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#38#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
