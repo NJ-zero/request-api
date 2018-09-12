@@ -59,3 +59,16 @@ def set_sql(sheetnum,rows,sqlresult):
         newWs = newWb.get_sheet(sheetnum)
         newWs.write(rows,14,sqlresult)
         newWb.save(file)
+
+def set_time(sheetnum,rows,time_consume):
+    '''
+    写入接口请求耗时
+    :param sheetnum:
+    :param rows:
+    :param time_consume:
+    :return:
+    '''
+    newWb = set_data()
+    newWs = newWb.get_sheet(sheetnum)
+    newWs.write(rows, 16, time_consume)
+    newWb.save(file)

@@ -37,6 +37,7 @@ class Pd(unittest.TestCase):
                 print url
                 if get.get_data('pd',i+1,3) == 'post':
                     r=requests.post(url=url,headers=header,data=data)
+                    time_consume = r.elapsed.microseconds
 
                     if checkall.checkall('pd',i+1,r.status_code,r.content) == 'pass':
                         set.set_result(1,i+1,'pass')
@@ -61,6 +62,7 @@ class Pd(unittest.TestCase):
                     set.set_statuscode(1,i+1,r.status_code)
                     set.set_content(1,i+1,r.content.decode('UTF-8'))
                     set.set_sql(1,i+1,checkdb.check('pd',i+1)[1])
+                    set.set_time(1,i+1,str(time_consume))
 
             elif int(get.get_data('pd',i+1,4))== 0:
                 print 'not execute'
